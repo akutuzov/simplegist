@@ -98,7 +98,7 @@ class Simplegist:
 			'Embed-Script': '<script src="%s/%s/%s.js"</script>' %(GIST_URL,self.username,r.json()['id']),
 			'id': r.json()['id'],
 			'created_at': r.json()['created_at'],
-
+			'files': r.json()['files'],
 			}
 			return response
 		raise Exception('Gist not created: server response was [%s] %s' % (r.status_code, r.text))
